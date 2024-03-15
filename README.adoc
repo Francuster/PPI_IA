@@ -1,0 +1,44 @@
+= TP Inicial - Aplicación de la Inteligencia Artificial
+version 1.0 - 15 Marzo, 2024: 
+:toc:
+:icons: font
+:url-quickref: https://docs.asciidoctor.org/asciidoc/latest/syntax-quick-reference/
+
+== Integrantes
+
+* Franco Disabato <francodisabatobook@gmail.com>
+* Suarez Matias <matiassuarez265@gmail.com>
+* Aysa Diego <diegoayza82@gmail.com>
+
+== Profesores
+
+* Juan Carlos Monteros <jcmonteros@campus.ungs.edu.ar>
+* Evelin Aragon <eve_aragon@hotmail.com>
+
+== Objetivos
+
+* Investigar y documentar los conceptos de IA en la vida diaria, Onboarding Digital, su importancia y normativas vigentes. 
+* Implementar un chatbot que interactue con el usuario y le pida la informacion necesaria para confirmar su identidad y/o responder las preguntas que pueda tener sobre el proceso de Onboarding.
+
+
+== Documentacion
+
+A continuacion se documenta la investigacion realizada acerca de Aplicaciones de IA, Onboarding Digital y Normativas Existentes
+
+=== Aplicaciones de la IA
+
+TODO
+
+=== Onboarding Digital
+
+Es el proceso de adquirir un nuevo cliente para una nueva compañia, tipicamente usando un telefono celular. El principal proposito del Onboarding digital es verificar la identidad del nuevo usuario para asegurarse de que dicha persona es quien dice ser. Para verificar la indentidad de un usuario digital y remotamente se utilizan datos biometricos faciales y tecnologia de "deteccion de vida", convinados con la capacidad de procesar documentos de identidad digitalmente.
+La deteccion de vida es una tecnica en donde un algoritmo detecta con seguridad si una muestra biometrica proviene de una representacion falsa(foto quieta) o si es un ser humano vivo. La muestra biometrica es una foto facial tomada por el usuario. El algoritmo es capaz de diferenciar una persona viva de otro tipo de ataques, por ejemplo, mascaras, fotos o videos pre-grabados.
+
+
+=== Normativas Existentes
+
+TODO
+
+== Referencias
+
+https://www.innovatrics.com/glossary/digital-onboarding/
