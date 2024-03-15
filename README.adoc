@@ -39,6 +39,11 @@ La deteccion de vida es una tecnica en donde un algoritmo detecta con seguridad 
 
 TODO
 
+== Herramientas a Utilizar
+
+* Github como controlador de fuentes y desarrollar en paralelo.
+* Python como lenguaje de programacion y scikit-learn como biblioteca de herramientas de machine learning. 
+
 == Referencias
 
 https://www.innovatrics.com/glossary/digital-onboarding/
