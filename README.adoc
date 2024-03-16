@@ -8,7 +8,7 @@ version 1.0 - 15 Marzo, 2024:
 
 * Franco Disabato <francodisabatobook@gmail.com>
 * Suarez Matias <matiassuarez265@gmail.com>
-* Aysa Diego <diegoayza82@gmail.com>
+* Ayza Diego <diegoayza82@gmail.com>
 
 == Profesores
 
