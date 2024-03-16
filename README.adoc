@@ -31,8 +31,8 @@ TODO
 
 === Onboarding Digital
 
-Es el proceso de adquirir un nuevo cliente para una nueva compañia, tipicamente usando un telefono celular. El principal proposito del Onboarding digital es verificar la identidad del nuevo usuario para asegurarse de que dicha persona es quien dice ser. Para verificar la indentidad de un usuario digital y remotamente se utilizan datos biometricos faciales y tecnologia de "deteccion de vida", convinados con la capacidad de procesar documentos de identidad digitalmente.
-La deteccion de vida es una tecnica en donde un algoritmo detecta con seguridad si una muestra biometrica proviene de una representacion falsa(foto quieta) o si es un ser humano vivo. La muestra biometrica es una foto facial tomada por el usuario. El algoritmo es capaz de diferenciar una persona viva de otro tipo de ataques, por ejemplo, mascaras, fotos o videos pre-grabados.
+Es el proceso de adquirir un nuevo cliente para una nueva compañía, típicamente usando un teléfono celular. El principal propósito del Onboarding digital es verificar la identidad del nuevo usuario para asegurarse de que dicha persona es quien dice ser. Para verificar la identidad de un usuario digital y remotamente se utilizan datos biométricos faciales y tecnología de "detección de vida", combinados con la capacidad de procesar documentos de identidad digitalmente.
+La detección de vida es una técnica en donde un algoritmo detecta con seguridad si una muestra biométrica proviene de una representación falsa(foto quieta) o si es un ser humano vivo. La muestra biométrica es una foto facial tomada por el usuario. El algoritmo es capaz de diferenciar una persona viva de otro tipo de ataques, por ejemplo, mascarás, fotos o videos pregrabados.
 
 
 === Normativas Existentes
