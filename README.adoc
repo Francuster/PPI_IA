@@ -101,7 +101,7 @@ En resumen, el objetivo es la eficiencia, la productividad y la experiencia del 
 * Scikit-learn como biblioteca de herramientas de machine learning.
 * Visual Studio Code como IDE
 
-== Referencias
+== Referencias 
 
 * https://www.innovatrics.com/glossary/digital-onboarding/
 * https://www.apd.es/algoritmos-del-machine-learning/#:~:text=Una%20vez%20entendido%20qu%C3%A9%20es,no%20supervisado%20y%20por%20refuerzo
