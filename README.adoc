@@ -10,7 +10,7 @@ version 1.0 - 15 Marzo, 2024:
 * Suarez Matias <matiassuarez265@gmail.com>
 * Ayza Diego <diegoayza82@gmail.com>
 
-== 
+== Profesores
 
 * Juan Carlos Monteros <jcmonteros@campus.ungs.edu.ar>
 * Evelin Aragon <eve_aragon@hotmail.com>
@@ -63,8 +63,7 @@ que hoy en día se creían complejas para las maquinas.
 
 === Onboarding Digital
 
-Es el proceso de adquirir un nuevo cliente para una nueva compañía, típicamente usando un teléfono celular. El principal propósito del Onboarding digital es verificar la identidad del nuevo usuario para asegurarse de que dicha persona es quien dice ser. Para verificar la identidad de un usuario digital y remotamente se utilizan datos biométricos faciales y tecnología de "detección de vida", combinados con la capacidad de procesar documentos de identidad digitalmente.
-La detección de vida es una técnica en donde un algoritmo detecta con seguridad si una muestra biométrica proviene de una representación falsa(foto quieta) o si es un ser humano vivo. La muestra biométrica es una foto facial tomada por el usuario. El algoritmo es capaz de diferenciar una persona viva de otro tipo de ataques, por ejemplo, mascarás, fotos o videos pregrabados.
+Es el proceso de adquirir un nuevo cliente para una nueva compañía, típicamente usando un teléfono celular. El principal propósito del Onboarding digital es verificar la identidad del nuevo usuario para asegurarse de que dicha persona es quien dice ser. Para verificar la identidad de un usuario digital y remotamente se utilizan datos biométricos faciales y tecnología de "detección de vida", combinados con la capacidad de procesar documentos de identidad digitalmente. La detección de vida es una técnica en donde un algoritmo detecta con seguridad si una muestra biométrica proviene de una representación falsa(foto quieta) o si es un ser humano vivo. La muestra biométrica es una foto facial tomada por el usuario. El algoritmo es capaz de diferenciar una persona viva de otro tipo de ataques, por ejemplo, mascarás, fotos o videos pregrabados.
 
 
 === Normativas Existentes
@@ -82,12 +81,20 @@ El aprendizaje por refuerzo se centra en los procesos de aprendizajes reglamenta
 Al definir las reglas, el algoritmo de aprendizaje automático intenta explorar diferentes opciones y posibilidades, monitorizando y evaluando cada resultado para determinar cuál es el óptimo.
 En consecuencia, este sistema enseña la máquina a través del proceso de ensayo y error. Aprende de experiencias pasadas y comienza a adaptar su enfoque en respuesta a la situación para lograr el mejor resultado posible.
 
+== ¿Cuál es el objetivo u objetivos que desean lograr con el Chatbot?
+Los objetivos principales que se pueden lograr utilizando el chatbot con IA son como resolver dudas sobre productos de los clientes o usuarios, enviar mail o avisos a estos mismos, una atención 24hs personalizada e inmediata, es una de las exigencias actuales de los usuarios.
+Con esta herramienta se pueden elevar la eficiencia de trabajo, generación de leads, recopilación de datos, reducción de costos a la empresa, mejorar estrategia de ventas y/o reducir los tiempos de interacción con los usuarios, lo que hace que el usuario tenga la sensación de estar hablando con una persona real. Aunque parece algo muy básico, puede ser el puntapié inicial de una conversación que dé como resultado un nuevo lead para tu negocio o inclusive una venta.
+En resumen, el objetivo es la eficiencia, la productividad y la experiencia del usuario en una amplia variedad de aplicaciones y contextos.  
 
 == Herramientas a Utilizar
 
 * Github como controlador de fuentes y desarrollar en paralelo.
 * Python como lenguaje de programacion y scikit-learn como biblioteca de herramientas de machine learning. 
 
-== Referencias
+== Referencias 
 
 https://www.innovatrics.com/glossary/digital-onboarding/
+
+https://www.apd.es/algoritmos-del-machine-learning/#:~:text=Una%20vez%20entendido%20qu%C3%A9%20es,no%20supervisado%20y%20por%20refuerzo
+
+https://blog.cliengo.com/chatbots-opciones/
