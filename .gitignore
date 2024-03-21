@@ -159,3 +159,7 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 .vscode/settings.json
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/vcs.xml
+.idea/PPI_IA.iml
+.idea/vcs.xml
