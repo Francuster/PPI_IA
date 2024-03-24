@@ -129,7 +129,7 @@ el impacto de los sistemas de IA
 Promover la sensibilización y la comprensión pública sobre las tecnologías de
 IA y el valor de los datos mediante la educación y la capacitación
 
-==== 10. Gobernanza y Colaboración Adaptativas
+==== Gobernanza y Colaboración Adaptativas
 Fomentar la participación de múltiples partes interesadas en la gobernanza de
 la IA para garantizar una implementación efectiva y ética.
 
