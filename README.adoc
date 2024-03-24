@@ -70,9 +70,7 @@ La detección de vida es una técnica en donde un algoritmo detecta con segurida
 Durante la verificación de identidad se le pide al usuario que cargue su documento de identidad o pasaporte. Se extrae del documento la información personal y foto del mismo. Se verifica la veracidad del documento y si tiene el chip integrado. 
 Se compara la foto selfie con los datos biométricos extraídos del documento de identificación.
 
-
-
-=== Normativas Existentes
+=== Tipos de Machine Learning
 
 ==== Aprendizaje supervisado
 En el aprendizaje supervisado, la máquina se enseña con el ejemplo. De este modo, el operador proporciona al algoritmo de aprendizaje automático un conjunto de datos conocidos que incluye las entradas y salidas deseadas, y el algoritmo debe encontrar un método para determinar cómo llegar a esas entradas y salidas.
@@ -86,6 +84,54 @@ En un proceso de aprendizaje no supervisado, se deja que el algoritmo de aprendi
 El aprendizaje por refuerzo se centra en los procesos de aprendizajes reglamentados, en los que se proporcionan algoritmos de aprendizaje automáticos con un conjunto de acciones, parámetros y valores finales.
 Al definir las reglas, el algoritmo de aprendizaje automático intenta explorar diferentes opciones y posibilidades, monitorizando y evaluando cada resultado para determinar cuál es el óptimo.
 En consecuencia, este sistema enseña la máquina a través del proceso de ensayo y error. Aprende de experiencias pasadas y comienza a adaptar su enfoque en respuesta a la situación para lograr el mejor resultado posible.
+
+=== Normativas del uso de IA
+En el ámbito de la Inteligencia Artificial (IA), es fundamental establecer normativas que
+garanticen su proporcionalidad e inocuidad. Aunque las tecnologías de IA ofrecen numerosos
+beneficios, su implementación también puede conllevar riesgos para los seres humanos y el
+medio ambiente. En este contexto, es esencial reconocer la necesidad de evaluar y prevenir
+posibles daños, así como de promover la seguridad, la equidad y la sostenibilidad en el
+desarrollo y uso de sistemas de IA. Los principios más importantes son
+
+==== Proporcionalidad e Inocuidad
+Se requieren procedimientos de evaluación de riesgos para prevenir daños
+humanos y ambientales
+
+==== Seguridad y Protección
+Se deben evitar los riesgos de seguridad y protección a lo largo del ciclo de vida
+de los sistemas de IA
+
+==== Equidad y No Discriminación
+Promover la inclusión y combatir la discriminación, minimizando los resultados
+sesgados de los sistemas de IA.
+
+==== Sostenibilidad
+Evaluar continuamente el impacto humano, social, cultural, económico y
+ambiental de las tecnologías de IA
+
+==== Derecho a la Intimidad y Protección de Datos
+Recopilar y utilizar datos de manera acorde a los principios éticos y legales,
+respetando la privacidad de los usuarios
+
+==== Supervisión y Decisión Humanas
+Aunque se puedan utilizar sistemas de IA para decisiones, la responsabilidad
+final sigue siendo humana.
+
+==== Transparencia y Explicabilidad
+Los sistemas de IA deben ser transparentes y explicables para respetar los
+derechos humanos y las libertades fundamentales
+
+==== Responsabilidad y Rendición de Cuentas
+Implementar mecanismos de supervisión y rendición de cuentas para evaluar
+el impacto de los sistemas de IA
+
+==== Sensibilización y Educación
+Promover la sensibilización y la comprensión pública sobre las tecnologías de
+IA y el valor de los datos mediante la educación y la capacitación
+
+==== 10. Gobernanza y Colaboración Adaptativas
+Fomentar la participación de múltiples partes interesadas en la gobernanza de
+la IA para garantizar una implementación efectiva y ética.
 
 === ¿Cuál es el objetivo u objetivos que desean lograr con el Chatbot?
 Dentro de los objetivos principales que se pueden lograr utilizando el chatbot con IA se pueden encontrar la resolución de dudas sobre productos de los clientes o usuarios, el envío de mails o avisos a los usuarios y la atención 24hs personalizada e inmediata.
