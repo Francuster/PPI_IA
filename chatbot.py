@@ -1,23 +1,20 @@
+import csv
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.neighbors import NearestNeighbors
-import numpy as np
 
-# Sample dataset of questions and answers
-questions = [
-    "What is your name?",
-    "How are you?",
-    "What is the weather today?",
-    "How old are you?",
-    "Tell me a joke."
-]
-answers = [
-    "I am ChatBot.",
-    "I'm doing well, thank you!",
-    "I'm not sure. You can check a weather website.",
-    "I don't have an age. I'm just a computer program.",
-    "Why don't skeletons fight each other? They don't have the guts."
-]
+# Load data from CSV file
+def load_data_from_csv(csv_file):
+    questions = []
+    answers = []
+    with open(csv_file, 'r') as file:
+        reader = csv.reader(file)
+        for row in reader:
+            questions.append(row[0])
+            answers.append(row[1])
+    return questions, answers
+
+# Load questions and answers from CSV
+questions, answers = load_data_from_csv('data.csv')
 
 # Vectorize the text data
 vectorizer = TfidfVectorizer()
