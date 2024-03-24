@@ -151,20 +151,20 @@ En resumen, el objetivo es la eficiencia, la productividad y la experiencia del 
 
 Se cargan desde el archivo data.csv las preguntas y respuestas para entrenar
 al algorito de machine learning.
-[,python]
+[source,python]
 ----
 include::chatbot.py[lines=7..15]
 ----
 Se vectorizan las preguntas, transformandolas en una secuencia de numeros que puede
 usarl el algoritmo.
-[,python]
+[source,python]
 ----
 include::chatbot.py[lines=20..22]
 ----
 
 Se utiliza el modelo de NearestNeighbors de aprendisaje no supervisado y se lo
 entrena con las preguntas vectorizadas.
-[,python]
+[source,python]
 ----
 include::chatbot.py[lines=24..26]
 ----
@@ -173,7 +173,7 @@ Al momento que el usuario ingresa una consulta, se vectoriza el texto a numeros
 que puede entender el modelo y se le pregunta al algoritmo a cual de los "vecinos"
 (las preguntas en este caso) se le asemeja mas. Esto devuelve el index del resultado
 mas cercano. Y con el index de la pregunta mas cercana se trae la respuesta correspondiente.
-[,python]
+[source,python]
 ----
 include::chatbot.py[lines=28..32]
 ----
