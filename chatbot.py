@@ -3,11 +3,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.neighbors import NearestNeighbors
 
 # Load data from CSV file
+# Function to load data from CSV file
 def load_data_from_csv(csv_file):
     questions = []
     answers = []
-    with open(csv_file, 'r') as file:
-        reader = csv.reader(file)
+    with open(csv_file, 'r', newline='') as file:
+        reader = csv.reader(file, quotechar='"', delimiter=',', quoting=csv.QUOTE_ALL, skipinitialspace=True)
         for row in reader:
             questions.append(row[0])
             answers.append(row[1])
