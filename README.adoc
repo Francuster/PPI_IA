@@ -142,8 +142,7 @@ En resumen, el objetivo es la eficiencia, la productividad y la experiencia del 
 == Herramientas a Utilizar
 
 * Github como controlador de fuentes y desarrollar en paralelo.
-** https://github.com/Francuster/PPI_IA
-* Python como lenguaje de programacion 
+* Python como lenguaje de programacion
 * Scikit-learn como biblioteca de herramientas de machine learning.
 * Visual Studio Code como IDE
 
@@ -221,3 +220,4 @@ la interacción con el usuario.
 * https://www.apd.es/algoritmos-del-machine-learning/#:~:text=Una%20vez%20entendido%20qu%C3%A9%20es,no%20supervisado%20y%20por%20refuerzo
 * https://blog.cliengo.com/chatbots-opciones/
 * Repositorio donde se estará volcando el trabajo realizado: https://github.com/Francuster/PPI_IA
+* ChatGPT
