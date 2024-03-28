@@ -142,8 +142,7 @@ En resumen, el objetivo es la eficiencia, la productividad y la experiencia del 
 == Herramientas a Utilizar
 
 * Github como controlador de fuentes y desarrollar en paralelo.
-** https://github.com/Francuster/PPI_IA
-* Python como lenguaje de programacion 
+* Python como lenguaje de programacion
 * Scikit-learn como biblioteca de herramientas de machine learning.
 * Visual Studio Code como IDE
 
@@ -155,15 +154,27 @@ al algorito de machine learning.
 ----
 include::chatbot.py[lines=7..15]
 ----
-Se vectorizan las preguntas, transformandolas en una secuencia de numeros que puede
-usarl el algoritmo.
+TfidfVectorizer() es una clase en la biblioteca Scikit-learn que se utiliza para convertir 
+colecciones de documentos de texto en representaciones numéricas utilizando 
+el esquema TF-IDF (Term Frequency-Inverse Document Frequency).
+Básicamente, TF-IDF aumenta proporcionalmente al número de veces que una palabra aparece 
+en un documento, pero se equilibra mediante la frecuencia de aparición de la palabra en el cuerpo. 
+Esto ayuda a identificar las palabras clave que son importantes para un documento en particular 
+en comparación con el cuerpo completo.
 [source,python]
 ----
 include::chatbot.py[lines=20..22]
 ----
 
-Se utiliza el modelo de NearestNeighbors de aprendisaje no supervisado y se lo
-entrena con las preguntas vectorizadas.
+NearestNeighbors(n_neighbors=1, algorithm='brute', metric='cosine') 
+es una clase en la biblioteca scikit-learn de Python que se utiliza para realizar búsquedas de vecinos 
+más cercanos en conjuntos de datos. Específicamente, se utiliza para encontrar los vecinos más cercanos 
+de un punto dado en un conjunto de datos.
+En nuestro ChatBot tenemos algunos parámetros necesarios para poder realizar la respuesta más acertada 
+para la pregunta del usuario:
+Sintetizando el trabajo de esta función, esta configuración del modelo NearestNeighbors buscará 
+el vecino más cercano para cada punto de consulta utilizando la distancia del coseno 
+y un enfoque de búsqueda de fuerza bruta.
 [source,python]
 ----
 include::chatbot.py[lines=24..26]
@@ -178,8 +189,30 @@ mas cercano. Y con el index de la pregunta mas cercana se trae la respuesta corr
 include::chatbot.py[lines=28..32]
 ----
 
-
 == Documentacion Funcional
+
+==== Carga de datos
+El chatbot carga las preguntas y respuestas de un archivo CSV utilizando la función load_data_from_csv. 
+Las preguntas se almacenan en una lista llamada questions y las respuestas en una lista llamada answers.
+
+==== Vectorización de datos
+Utiliza la clase TfidfVectorizer de scikit-learn para vectorizar las preguntas. 
+Esto convierte las preguntas de texto en representaciones numéricas que pueden ser procesadas por el modelo.
+
+==== Generación de respuestas
+La función generate_response toma la entrada del usuario, la vectoriza y encuentra la pregunta 
+más cercana utilizando el modelo de vecinos más cercanos entrenado. 
+Luego, devuelve la respuesta correspondiente a esa pregunta.
+
+==== Interfaz del chatbot
+El chatbot proporciona una interfaz interactiva donde espera la entrada del usuario por consola. 
+Responde a las entradas del usuario utilizando la función generate_response hasta 
+que el usuario escribe "quit", momento en el cual el chatbot se despide y termina.
+
+==== Ejecución del chatbot
+La ejecución principal se realiza verificando si el script se ejecuta 
+directamente (if __name__ == "__main__":) y llama a la función chatbot para iniciar 
+la interacción con el usuario.
 
 == Referencias 
 
@@ -187,3 +220,4 @@ include::chatbot.py[lines=28..32]
 * https://www.apd.es/algoritmos-del-machine-learning/#:~:text=Una%20vez%20entendido%20qu%C3%A9%20es,no%20supervisado%20y%20por%20refuerzo
 * https://blog.cliengo.com/chatbots-opciones/
 * Repositorio donde se estará volcando el trabajo realizado: https://github.com/Francuster/PPI_IA
+* ChatGPT
