@@ -5,8 +5,7 @@ import numpy as np
 database = {
     'usuario1': cv2.imread('img/huella1.jpg', cv2.IMREAD_GRAYSCALE),
     'usuario2': cv2.imread('img/huella2.jpg', cv2.IMREAD_GRAYSCALE),
-    'usuario3': cv2.imread('img/huella3.jpg', cv2.IMREAD_GRAYSCALE),
-
+    'usuario3': cv2.imread('img/huella3.jpg', cv2.IMREAD_GRAYSCALE)
 }
 
 def compare_fingerprints(fingerprint1, fingerprint2):
@@ -27,13 +26,33 @@ def authenticate_fingerprint(input_fingerprint):
 
     return authenticated_user
 
-# Simulación de captura de huella digital (cargando una imagen)
-input_fingerprint = cv2.imread('img/huella_a_comparar.jpg', cv2.IMREAD_GRAYSCALE)
 
-# Autenticación de la huella digital capturada
-authenticated_user = authenticate_fingerprint(input_fingerprint)
+#input_fingerprint = cv2.imread('img/huella_a_comparar.jpg', cv2.IMREAD_GRAYSCALE)
 
-if authenticated_user:
-    print(f'Autenticación exitosa. Bienvenido, {authenticated_user}.')
-else:
-    print('Autenticación fallida. Usuario no reconocido.')
+
+def auth(input):
+    try:
+        # Simulación de captura de huella digital (cargando una imagen)
+        input_fingerprint = cv2.imread(input, cv2.IMREAD_GRAYSCALE)
+        # Autenticación de la huella digital capturada
+        authenticated_user = authenticate_fingerprint(input_fingerprint)
+
+        if authenticated_user:
+            print(f'Autenticación exitosa. Bienvenido, {authenticated_user}.')
+        else:
+            print('Autenticación fallida. Usuario no reconocido.')
+    except:
+        print('direccion de imagen invalida.')
+
+def login():
+    print("Hi! Please enter your fingerprint img path bellow. Type 'quit' to exit.")
+    while True:
+        user_input = input("Fingerprint path: ")
+        if user_input.lower() == 'quit':
+            print("ChatBot: Goodbye!")
+            break
+        auth(user_input)
+
+# Run the chatbot
+if __name__ == "__main__":
+    login()

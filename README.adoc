@@ -148,6 +148,8 @@ En resumen, el objetivo es la eficiencia, la productividad y la experiencia del 
 
 == Documentacion Tecnica
 
+=== Chatbot
+
 Se cargan desde el archivo data.csv las preguntas y respuestas para entrenar
 al algorito de machine learning.
 [source,python]
@@ -187,6 +189,61 @@ mas cercano. Y con el index de la pregunta mas cercana se trae la respuesta corr
 [source,python]
 ----
 include::chatbot.py[lines=28..32]
+----
+
+=== Login con huella digital
+
+Instalar liberia Opencv
+[source,console]
+----
+pip install opencv-python
+----
+
+Generamos una base en el codigo, en la cual cargamos las huellas digitales las cuales ya estan validadas como
+usuarios del sistema. La funcion cv2.imread(image, flag) toma como parametros la ubicacion de imagen de
+la huella digital y un flag que determina el codec con el que se convierte la imagen (en este caso a una escala de
+grises). Este hace que por cada usuario se guarde una matriz con las caracteristicas unicas de la huella digital leida.
+
+[source,python]
+----
+include::loginHuella.py[lines=4..9]
+----
+
+Al momento de comparar huellas digitales, se comparan las matrices de las huellas digitales con el metodo
+absDiff() y el mismo devuelve una nueva matriz con la diferencia entre entre ambas matrices. En caso de ser identicas
+devuelve 0 en todas las posiciones.
+
+Luego np.sum(M) se le pasa la matriz resultante como parametro y devuelve la suma total de diferencias como int.
+
+[source,python]
+----
+include::loginHuella.py[lines=11..14]
+----
+
+Al momento de autenticar al usuario con su huella digital, se establece primero un minimo margen de diferencia
+aceptable (min_difference) entre la nueva huella ingresada por el usaurio y la almacenada en la base de datos.
+
+Se recorren las huellas almacenadas en la base y se compara la diferencia con la nueva huella ingresada. Si la
+diferencia es menor al minimo establecido se la toma como candidata a la que corresponde al usuario iniciando sesion
+y se actualiza la min_difference al nuevo valor. Se sigue iterando por las huellas almacenadas hasta encontrar
+el mejor candidato (cuya diferencia este mas cerca de cero). Una vez finalizada la iteracion tenemos 2 resultados
+posibles: se encontro el mejor candidato y su correspondiente usuario o no se encontro ningun candidato que
+tenga el minimo de diferencias definido.
+
+Se devuelve el usuario autenticado o None en caso de existir coincidencias.
+
+[source,python]
+----
+include::loginHuella.py[lines=16..27]
+----
+
+Se le pide al usuario que ingrese su huella digital (en este caso en forma de path de la imagen). Se convierte
+la misma en una matriz y se la compara contra la base de huellas pre-cargadas. En caso de la huella coincida
+(al menos con el minimo de diferencia que hemos configurado) el usuario sera autenticado.
+
+[source,python]
+----
+include::loginHuella.py[lines=33..45]
 ----
 
 == Documentacion Funcional
