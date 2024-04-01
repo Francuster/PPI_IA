@@ -248,6 +248,8 @@ include::loginHuella.py[lines=33..45]
 
 == Documentacion Funcional
 
+=== Chatbot
+
 ==== Carga de datos
 El chatbot carga las preguntas y respuestas de un archivo CSV utilizando la función load_data_from_csv. 
 Las preguntas se almacenan en una lista llamada questions y las respuestas en una lista llamada answers.
@@ -271,7 +273,7 @@ La ejecución principal se realiza verificando si el script se ejecuta
 directamente (if __name__ == "__main__":) y llama a la función chatbot para iniciar 
 la interacción con el usuario.
 
-== Documentacion Funcional Login Huella Digital
+=== Login Huella Digital
 
 ==== Definición de la base de datos de huellas digitales 
 Al inicio del código, se define un diccionario llamado database que contiene
