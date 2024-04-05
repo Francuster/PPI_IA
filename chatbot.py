@@ -32,16 +32,9 @@ def generate_response(input_text):
     return answers[index[0][0]]
 
 # Chatbot interface
-def chatbot():
-    print("Hi! I'm ChatBot. Type 'quit' to exit.")
-    while True:
-        user_input = input("You: ")
-        if user_input.lower() == 'quit':
-            print("ChatBot: Goodbye!")
-            break
-        response = generate_response(user_input)
-        print("ChatBot:", response)
-
+def chatbot(respuesta):
+    response = generate_response(respuesta)
+    return response
 # Run the chatbot
 if __name__ == "__main__":
     chatbot()
