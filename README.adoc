@@ -248,6 +248,8 @@ include::loginHuella.py[lines=33..45]
 
 == Documentacion Funcional
 
+=== Chatbot
+
 ==== Carga de datos
 El chatbot carga las preguntas y respuestas de un archivo CSV utilizando la función load_data_from_csv. 
 Las preguntas se almacenan en una lista llamada questions y las respuestas en una lista llamada answers.
@@ -269,6 +271,43 @@ que el usuario escribe "quit", momento en el cual el chatbot se despide y termin
 ==== Ejecución del chatbot
 La ejecución principal se realiza verificando si el script se ejecuta 
 directamente (if __name__ == "__main__":) y llama a la función chatbot para iniciar 
+la interacción con el usuario.
+
+=== Login Huella Digital
+
+==== Definición de la base de datos de huellas digitales 
+Al inicio del código, se define un diccionario llamado database que contiene
+imágenes de huellas digitales asociadas a nombres de usuario. 
+Estas imágenes se cargan desde archivos usando la biblioteca OpenCV (cv2).
+
+==== Comparación de huellas digitales
+Se define una función llamada `compare_fingerprints(fingerprint1, fingerprint2)` 
+que calcula la diferencia absoluta entre dos huellas digitales. Esto se hace usando la función 
+`cv2.absdiff()`, que encuentra la diferencia píxel a píxel entre las dos imágenes 
+y devuelve una nueva imagen que contiene estas diferencias. Luego, se suma el valor 
+absoluto de todos los elementos en esta nueva imagen, proporcionando
+la diferencia total entre las huellas digitales.
+
+==== Autenticación de huellas digitales
+Se define una función llamada `authenticate_fingerprint(input_fingerprint)` que autentica 
+una huella digital de entrada comparándola con las huellas digitales almacenadas en 
+la base de datos. Itera sobre cada huella digital en la base de datos, calcula la diferencia 
+utilizando la función `compare_fingerprints()` y devuelve el nombre de usuario asociado a la 
+huella digital almacenada con la menor diferencia absoluta.
+
+==== Función de autenticación
+La función `auth(input)` toma la ruta de una imagen de huella digital como entrada, 
+carga la imagen utilizando OpenCV y luego llama a `authenticate_fingerprint()` 
+para autenticar la huella digital. Dependiendo del resultado de la autenticación, 
+imprime un mensaje indicando si la autenticación fue exitosa o no.
+
+==== Interacción con el usuario
+La función `login()` solicita al usuario que ingrese la ruta de la imagen de la huella digital. 
+Itera este proceso hasta que el usuario escriba "quit".
+
+==== Ejecución del programa
+Al final del script, se verifica si el script se está ejecutando directamente 
+(`__name__ == "__main__"`) y, si es así, se llama a la función `login()` para iniciar 
 la interacción con el usuario.
 
 == Referencias 
