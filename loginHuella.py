@@ -29,6 +29,15 @@ def authenticate_fingerprint(input_fingerprint):
 
 #input_fingerprint = cv2.imread('img/huella_a_comparar.jpg', cv2.IMREAD_GRAYSCALE)
 
+def decode_and_verify(image_file):
+    # Read the image file directly from memory
+    nparr = np.fromstring(image_file.read(), np.uint8)
+    input_fingerprint = cv2.imdecode(nparr, cv2.IMREAD_GRAYSCALE)
+
+    # Autenticación de la huella digital capturada
+    authenticated_user = authenticate_fingerprint(input_fingerprint)
+
+    return authenticated_user;
 
 def auth(input):
     try:
