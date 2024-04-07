@@ -246,6 +246,52 @@ la misma en una matriz y se la compara contra la base de huellas pre-cargadas. E
 include::loginHuella.py[lines=33..45]
 ----
 
+=== Chatbot como servicio
+
+==== Flask
+
+Se instalo Flask usando `pip install Flask`
+
+El mismo permite levantar python como un servicio web y configurar endpoints para hacer llamadas por http/https.
+
+[source,python]
+----
+include::webApp.py[lines=6]
+----
+
+Se configuro la ruta de acceso para el chatbot en '/chatbot' y meotod GET.
+Se lee el queryParams 'input' el cual contiene la pregunta del usuario.
+
+En caso de no existir texto se devuelve un json con un mensaje de error y codigo 400.
+
+Si existe texto dentro de input, se pasa el mismo al metodo pre-existente `generate_response()` el cual es importado
+de chatbot.py.
+
+Se adjunta la respuesta del chatbot junto con la pregunta original en un JSON y se responde al http request.
+
+[source,python]
+----
+include::webApp.py[lines=9..16]
+----
+
+==== CORS
+
+Se instalo Flask usando `pip install -U flask-cors`
+
+
+=== Front-end en Angular
+
+Se genero una pagina web en Angular para mostrar el consumo del chatbot como servicio.
+
+El codigo del mismo se encuentra en el repositorio: https://github.com/Francuster/PPI-front
+
+Se puede levantar localmente primero instalando con `npm install` y luego ejecutando `ng serve`.
+
+Se creo una cuenta en https://vercel.com para generar un deploy automatizado, dandole acceso al servidor de github
+correspondiente. De esta manera queda disponible el codigo http en la siguiente URL: https://ppi-front.vercel.app/
+
+
+
 == Documentacion Funcional
 
 === Chatbot
@@ -310,10 +356,15 @@ Al final del script, se verifica si el script se está ejecutando directamente
 (`__name__ == "__main__"`) y, si es así, se llama a la función `login()` para iniciar 
 la interacción con el usuario.
 
+=== Chatbot como servicio
+
+TODO
+
 == Referencias 
 
 * https://www.innovatrics.com/glossary/digital-onboarding/
 * https://www.apd.es/algoritmos-del-machine-learning/#:~:text=Una%20vez%20entendido%20qu%C3%A9%20es,no%20supervisado%20y%20por%20refuerzo
 * https://blog.cliengo.com/chatbots-opciones/
 * Repositorio donde se estará volcando el trabajo realizado: https://github.com/Francuster/PPI_IA
+* Repositorio de front-end en Angular https://github.com/Francuster/PPI-front
 * ChatGPT
