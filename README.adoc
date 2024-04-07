@@ -301,7 +301,7 @@ El codigo del mismo se encuentra en el repositorio: https://github.com/Francuste
 Se puede levantar localmente primero instalando con `npm install` y luego ejecutando `ng serve`.
 
 Se creo una cuenta en https://vercel.com para generar un deploy automatizado, dandole acceso al servidor de github
-correspondiente. De esta manera queda disponible el codigo http en la siguiente URL: https://ppi-front.vercel.app/
+correspondiente. De esta manera queda disponible la pagina web en la siguiente URL: https://ppi-front.vercel.app/
 
 
 
