@@ -259,7 +259,7 @@ El mismo permite levantar python como un servicio web y configurar endpoints par
 include::webApp.py[lines=6]
 ----
 
-Se configuro la ruta de acceso para el chatbot en '/chatbot' y meotod GET.
+Se configuro la ruta de acceso para el chatbot en '/chatbot' y metodo GET.
 Se lee el queryParams 'input' el cual contiene la pregunta del usuario.
 
 En caso de no existir texto se devuelve un json con un mensaje de error y codigo 400.
@@ -276,8 +276,21 @@ include::webApp.py[lines=9..16]
 
 ==== CORS
 
-Se instalo Flask usando `pip install -U flask-cors`
+Se instalo Flask-Cors usando `pip install -U flask-cors`
 
+El CORS (Cross-origin resource sharing) permite configurar a que paginas web (front-end) se les da acceso
+a los endpoint de un servicio web (back-end). En nuestro caso decidimos dejarlo sin restricciones, por lo
+cual cualquier pagina podria consumir nuestros endpoint.
+
+
+[source,python]
+----
+include::webApp.py[lines=7]
+----
+
+=== PythonAnywhere
+
+TODO
 
 === Front-end en Angular
 
