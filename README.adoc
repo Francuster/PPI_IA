@@ -288,37 +288,10 @@ cual cualquier pagina podria consumir nuestros endpoint.
 include::webApp.py[lines=7]
 ----
 
-=== PythonAnywhere
+=== Vercel
 
-1-Inicia sesión en PythonAnywhere: Abre tu navegador web y ve a la página de inicio de sesión de PythonAnywhere. Inicia sesión con tu cuenta.
-
-2-Accede al Dashboard: Una vez que hayas iniciado sesión, serás llevado al dashboard de PythonAnywhere.
-
-3-Crea un nuevo directorio: Ve a la sección de "Files" en el dashboard y haz clic en "New Directory" para crear un nuevo directorio para tu proyecto.
-
-4-Sube tus archivos: Haz clic en el nuevo directorio que acabas de crear para abrirlo. Luego, usa la opción "Upload a file" para subir todos los archivos de tu chatbot. Esto incluirá los archivos de Python, HTML, CSS, y cualquier otro archivo necesario para el chatbot.
-
-5-Configura un entorno virtual (opcional): Si tu chatbot depende de bibliotecas específicas de Python, es una buena idea configurar un entorno virtual en PythonAnywhere para gestionar las dependencias. Puedes hacerlo abriendo una terminal de PythonAnywhere e instalando las bibliotecas necesarias con pip.
-
-6-Configura una aplicación web: Ve a la sección de "Web" en el dashboard de PythonAnywhere y haz clic en "Add a new web app". Sigue las instrucciones para configurar tu aplicación web. Asegúrate de seleccionar el directorio y el entorno virtual adecuados para tu chatbot.
-
-7-Configura el servidor web: Si estás utilizando Flask u otro marco web, necesitarás configurar el servidor web para que ejecute tu aplicación. Puedes hacerlo especificando el punto de entrada (por ejemplo, app.py para Flask) y el archivo de configuración WSGI.
-
-8-Inicia tu aplicación web: Una vez que hayas configurado todo, puedes iniciar tu aplicación web desde el dashboard de PythonAnywhere. El servidor web comenzará a ejecutar tu chatbot y estará disponible en la URL proporcionada por PythonAnywhere.
-Por ultimo este servicio que nos ofrece PythonAnywhere en su version Gratuita solo nos permite ejecutarlo por 3 meses
-
-=== Front-end en Angular
-
-Se genero una pagina web en Angular para mostrar el consumo del chatbot como servicio.
-
-El codigo del mismo se encuentra en el repositorio: https://github.com/Francuster/PPI-front
-
-Se puede levantar localmente primero instalando con `npm install` y luego ejecutando `ng serve`.
-
-Se creo una cuenta en https://vercel.com para generar un deploy automatizado, dandole acceso al servidor de github
-correspondiente. De esta manera queda disponible la pagina web en la siguiente URL: https://ppi-front.vercel.app/
-
-
+Se creo una repositorio en https://vercel.com para generar un deploy automatizado, dandole acceso al servidor de github
+donde se encuentra nuestra aplicación web. De esta manera queda disponible el servicio web en la siguiente URL: https://ppi-front.vercel.app/
 
 == Documentacion Funcional
 
@@ -386,7 +359,30 @@ la interacción con el usuario.
 
 === Chatbot como servicio
 
-TODO
+El código del chatbot lo alojamos en PythonAnywhere por que ofrece un servicio de hosting gratuito de 3 meses y es de sencilla utilización.
+Dentro del proyecto web creado en PythonAnywhere, armamos una aplicación Flask que proporciona dos endpoints:
+
+==== El endpoint del chatbot
+“`/chatbot`” espera recibir una solicitud GET con un parámetro `input` que contiene el texto con el que se quiere interactuar con el chatbot. Luego, llama a la función `generate_response` del módulo `chatbot` para generar una respuesta basada en el texto proporcionado y devuelve esta respuesta como JSON. A continuación se adjunta una request de ejemplo y su respectiva respuesta respuesta:
+
+Request: https://matizipi.pythonanywhere.com/chatbot?input=What%20cases?
+
+Respuesta: {
+"request":"What cases?",
+"response":"Chatbot use cases include virtual assistants, customer support, sales assistance, language learning, and entertainment."
+        }
+
+==== El endpoint del lector de huellas
+
+“`/upload`” recibe una solicitud POST con un archivo de imagen adjunto llamado `image`. Luego, utiliza la función `decode_and_verify` del módulo `loginHuella` para decodificar y verificar la imagen. Dependiendo del resultado de la verificación, devuelve un JSON indicando si el usuario está autenticado o no, junto con alguna información adicional, como el nombre de usuario. A continuación se adjunta una request de ejemplo y su respectiva respuesta respuesta:
+
+Request: https://matizipi.pythonanywhere.com/upload
+
+Respuesta: {
+“authenticated”: true, 
+“user”: "usuario1"
+        }
+Además, el código utiliza la extensión Flask-CORS para permitir el acceso a estos endpoints desde dominios diferentes al del servidor en el que se ejecuta la aplicación Flask. Esto nos permitió consumir estos endpoints desde otra aplicación que utilizamos como interfaz de usuario.
 
 == Referencias 
 
