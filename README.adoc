@@ -274,6 +274,21 @@ Se adjunta la respuesta del chatbot junto con la pregunta original en un JSON y 
 include::webApp.py[lines=9..16]
 ----
 
+Se configuro la ruta de acceso para el chatbot en '/upload' y metodo POST. Recibe un archivo con nombre 'image'.
+En caso de no existir texto se devuelve un json con un mensaje de error y codigo 400.
+
+El mismo se pasa al metodo `decode_and_verify()` el cual decodifica la imagen y la convierte en una matriz.
+Se compara la misma con el resto de las huellas cargadas en el sistema. En caso de que coincidan devuelve el usuario
+correspondiente. En el caso contrario devuelve un string vacio.
+
+Luego se arma un objeto con el nombre de usuario (si lo tiene) y un boolean que 'authenticated' que representa
+si el usuario pudo iniciar sesion exitosamente o no.
+
+[source,python]
+----
+include::webApp.py[lines=19..46]
+----
+
 ==== CORS
 
 Se instalo Flask-Cors usando `pip install -U flask-cors`
@@ -290,8 +305,12 @@ include::webApp.py[lines=7]
 
 === Vercel
 
-Se creo una repositorio en https://vercel.com para generar un deploy automatizado, dandole acceso al servidor de github
-donde se encuentra nuestra aplicación web. De esta manera queda disponible el servicio web en la siguiente URL: https://ppi-front.vercel.app/
+Se creo una cuenta en https://vercel.com para generar un deploy automatizado, dandole acceso al servidor de github
+donde se encuentra nuestra aplicación web. El mismo descarga la aplicacion, compila los html, js y css correspondientes
+y genera un deploy como un subdominio de vercel.
+De esta manera queda disponible el servicio web en la siguiente URL: https://ppi-front.vercel.app/
+
+Repositorio del front-end. https://github.com/Francuster/PPI-front
 
 == Documentacion Funcional
 
