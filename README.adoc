@@ -290,7 +290,22 @@ include::webApp.py[lines=7]
 
 === PythonAnywhere
 
-TODO
+1-Inicia sesión en PythonAnywhere: Abre tu navegador web y ve a la página de inicio de sesión de PythonAnywhere. Inicia sesión con tu cuenta.
+
+2-Accede al Dashboard: Una vez que hayas iniciado sesión, serás llevado al dashboard de PythonAnywhere.
+
+3-Crea un nuevo directorio: Ve a la sección de "Files" en el dashboard y haz clic en "New Directory" para crear un nuevo directorio para tu proyecto.
+
+4-Sube tus archivos: Haz clic en el nuevo directorio que acabas de crear para abrirlo. Luego, usa la opción "Upload a file" para subir todos los archivos de tu chatbot. Esto incluirá los archivos de Python, HTML, CSS, y cualquier otro archivo necesario para el chatbot.
+
+5-Configura un entorno virtual (opcional): Si tu chatbot depende de bibliotecas específicas de Python, es una buena idea configurar un entorno virtual en PythonAnywhere para gestionar las dependencias. Puedes hacerlo abriendo una terminal de PythonAnywhere e instalando las bibliotecas necesarias con pip.
+
+6-Configura una aplicación web: Ve a la sección de "Web" en el dashboard de PythonAnywhere y haz clic en "Add a new web app". Sigue las instrucciones para configurar tu aplicación web. Asegúrate de seleccionar el directorio y el entorno virtual adecuados para tu chatbot.
+
+7-Configura el servidor web: Si estás utilizando Flask u otro marco web, necesitarás configurar el servidor web para que ejecute tu aplicación. Puedes hacerlo especificando el punto de entrada (por ejemplo, app.py para Flask) y el archivo de configuración WSGI.
+
+8-Inicia tu aplicación web: Una vez que hayas configurado todo, puedes iniciar tu aplicación web desde el dashboard de PythonAnywhere. El servidor web comenzará a ejecutar tu chatbot y estará disponible en la URL proporcionada por PythonAnywhere.
+Por ultimo este servicio que nos ofrece PythonAnywhere en su version Gratuita solo nos permite ejecutarlo por 3 meses
 
 === Front-end en Angular
 
